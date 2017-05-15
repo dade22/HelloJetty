@@ -27,8 +27,10 @@ public class Start {
         Server server = null;
         try {
 
-            System.out.println("http://localhost:"+port+"/test/hello");
-            System.out.println("http://localhost:"+port+"/welcome/welcome?n=jetty");
+            System.out.println("http://localhost:"+port+"/hello/bye");
+            System.out.println("http://localhost:"+port+"/hello/welcome?n=jetty");
+            System.out.println("http://localhost:"+port+"/get/list");
+            System.out.println("http://localhost:"+port+"/get/student");
             System.out.println("\r\n");
 
             ResourceConfig resourceConfig = new ResourceConfig();
