@@ -5,20 +5,35 @@
  */
 package com.nicelogics.hellojetty.resources;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-@Path("welcome")
-public class Welcome {
+@Path("get")
+public class Retrieve {
 
     @GET
-    @Path("welcome")
+    @Path("list")
     @Produces(MediaType.APPLICATION_JSON)
-    public String welcome(@QueryParam("n") String name) {
+    public List<String> list() {
 
-        return "Welcome, "+name+"!";
+        List<String> l = new ArrayList<>();
+        l.add("one");
+        l.add("two");
+        l.add("three");
+        return l;
+    }
+    
+    
+    @GET
+    @Path("student")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Student student() {
+
+        return new Student();
     }
 }
