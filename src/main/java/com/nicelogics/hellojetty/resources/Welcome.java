@@ -8,16 +8,17 @@ package com.nicelogics.hellojetty.resources;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-@Path("home")
-public class Resource {
+@Path("welcome")
+public class Welcome {
 
     @GET
-    @Path("hello")
+    @Path("welcome")
     @Produces(MediaType.APPLICATION_JSON)
-    public String helloWorld() {
+    public String welcome(@QueryParam("n") String name) {
 
-        return "Hello, world!";
+        return "Welcome, "+name+"!";
     }
 }
