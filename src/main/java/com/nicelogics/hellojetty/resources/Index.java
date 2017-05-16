@@ -19,9 +19,8 @@ public class Index {
     public String hello() {
 
         int port = 2222;
-
         String s = "<html>\r\n";
-        
+
         s = addSection(s, "/hello");
         s = addLink(s, "/bye", "http://localhost:"+port+"/hello/bye");
         s = addLink(s, "/welcome?n=jetty", "http://localhost:"+port+"/hello/welcome?n=jetty");
@@ -29,8 +28,13 @@ public class Index {
         s = addSection(s, "/get");
         s = addLink(s, "/list", "http://localhost:"+port+"/get/list");
         s = addLink(s, "/student", "http://localhost:"+port+"/get/student");
-        s += "</html>";
 
+        s = addSection(s, "/session");
+        s = addLink(s, "/get", "http://localhost:"+port+"/session/get");
+        s = addLink(s, "/set", "http://localhost:"+port+"/session/set?n=jetty");
+        s = addLink(s, "/clear", "http://localhost:"+port+"/session/clear");
+
+        s += "</html>";
         return s;
     }
 
