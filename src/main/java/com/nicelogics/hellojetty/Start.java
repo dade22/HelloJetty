@@ -5,6 +5,8 @@
  */
 package com.nicelogics.hellojetty;
 
+import java.awt.Desktop;
+import java.net.URI;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -24,13 +26,11 @@ public class Start {
 
     private void go(int port) throws Exception {
 
+        boolean InDev = true;
         Server server = null;
         try {
 
-            System.out.println("http://localhost:"+port+"/hello/bye");
-            System.out.println("http://localhost:"+port+"/hello/welcome?n=jetty");
-            System.out.println("http://localhost:"+port+"/get/list");
-            System.out.println("http://localhost:"+port+"/get/student");
+            System.out.println("http://localhost:"+port+"/index.html");
             System.out.println("\r\n");
 
             ResourceConfig resourceConfig = new ResourceConfig();
@@ -56,10 +56,15 @@ public class Start {
 //        context.addServlet(servlet, "/*");
 
             server.start();
+
+            if(InDev && Desktop.isDesktopSupported())
+              Desktop.getDesktop().browse(new URI("http://localhost:"+port+"/index.html"));
+
             server.join();
 
         } catch (Exception ex) {
-
+            
+            ex.printStackTrace();
             throw ex;
 
         } finally {
