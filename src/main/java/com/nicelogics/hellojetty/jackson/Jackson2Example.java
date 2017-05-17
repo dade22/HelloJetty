@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Thanks to http://www.mkyong.com/java/jackson-2-convert-java-object-to-from-json/
+ * for this great example
  */
 package com.nicelogics.hellojetty.jackson;
 
