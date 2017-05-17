@@ -9,5 +9,11 @@
 * `Jersey` is an open source framework for developing RESTful Web Services
 * `Jackson` is a high-performance JSON processor for Java
 
+### (Probably) future friends:
+SLF4J, Logback, Liquibase, Mustache, FreeMarker, Joda-Time, Google Guava, Hibernate, EclipseLink, iText, Javax JCR, Vaadin
+
+### Very far future friends:
+Deeplearning4j, TensorFlow, ImageJ
+
 Happy coding,
 *Davide*
