@@ -8,7 +8,6 @@ package com.nicelogics.hellojetty.resources;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 @Path("index.html")
@@ -33,6 +32,9 @@ public class Index {
         s = addLink(s, "/get", "http://localhost:"+port+"/session/get");
         s = addLink(s, "/set", "http://localhost:"+port+"/session/set?n=jetty");
         s = addLink(s, "/clear", "http://localhost:"+port+"/session/clear");
+
+        s = addSection(s, "/jackson");
+        s = addLink(s, "/test", "http://localhost:"+port+"/jackson/test");
 
         s += "</html>";
         return s;
