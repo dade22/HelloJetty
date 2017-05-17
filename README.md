@@ -5,9 +5,9 @@
 
 ### A list of friends:
 
-* 'Jetty' is a Java HTTP (Web) server and Java Servlet container 
-* 'Jersey' is an open source framework for developing RESTful Web Services
-* 'Jackson' is a high-performance JSON processor for Java
+* `Jetty` is a Java HTTP (Web) server and Java Servlet container 
+* `Jersey` is an open source framework for developing RESTful Web Services
+* `Jackson` is a high-performance JSON processor for Java
 
 Happy coding,
 *Davide*
