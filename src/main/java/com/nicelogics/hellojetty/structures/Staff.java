@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.nicelogics.hellojetty.jackson;
+package com.nicelogics.hellojetty.structures;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import com.nicelogics.hellojetty.jackson.Views;
 import java.math.BigDecimal;
 import java.util.List;
 

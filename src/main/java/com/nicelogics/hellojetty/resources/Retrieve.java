@@ -5,6 +5,7 @@
  */
 package com.nicelogics.hellojetty.resources;
 
+import com.nicelogics.hellojetty.structures.Student;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.GET;

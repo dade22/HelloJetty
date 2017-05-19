@@ -5,6 +5,7 @@
  */
 package com.nicelogics.hellojetty;
 
+import com.nicelogics.hellojetty.logback.HaphazardLogger;
 import java.awt.Desktop;
 import java.net.URI;
 import org.eclipse.jetty.server.Server;
@@ -25,6 +26,8 @@ public class Start {
     }
 
     private void go(int port) throws Exception {
+
+        new HaphazardLogger().demo();
 
         boolean InDev = true;
         Server server = null;

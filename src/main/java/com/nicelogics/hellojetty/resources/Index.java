@@ -42,7 +42,7 @@ public class Index {
 
     private String addLink(String text, String label, String url)
     {
-        return text + "<a href=\""+url+"\">"+label+"</a><br>\r\n";
+        return text + "<a href=\""+url+"\" target=\"_blank\">"+label+"</a><br>\r\n";
     }
 
     private String addSection(String text, String label)

@@ -11,6 +11,7 @@ package com.nicelogics.hellojetty.jackson;
  *
  * @author Developer
  */
+import com.nicelogics.hellojetty.structures.Staff;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
