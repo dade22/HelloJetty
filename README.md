@@ -11,14 +11,14 @@
 * `Logback` is a Java-based logging utility. Successor to the popular log4j project.
 
 ### (Probably) future friends:
-*Hibernate*, EclipseLink, jOOQ
-*Flyway*, *Liquibase*
-Joda-Time
-Google Guava
-iText
-Javax JCR
-Mustache, FreeMarker
-*Vaadin*
+* *Hibernate*, EclipseLink, jOOQ, Sormula, SimpleORM
+* *Flyway*, *Liquibase*
+* Joda-Time
+* Google Guava
+* iText
+* Javax JCR
+* Mustache, FreeMarker
+* *Vaadin*
 
 ### Very far future friends:
 Deeplearning4j, TensorFlow, ImageJ ..mm.. and what else?
