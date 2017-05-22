@@ -33,6 +33,10 @@ public class Start {
         Server server = null;
         try {
 
+            System.out.println("user.dir: "+System.getProperty("user.dir"));
+            System.out.println("user.home: "+System.getProperty("user.home"));
+            System.out.println("java.home: "+System.getProperty("java.home"));
+
             System.out.println("http://localhost:"+port+"/index.html");
             System.out.println("\r\n");
 

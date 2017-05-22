@@ -4,8 +4,9 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="true">
+    <timestamp key="byDay" datePattern="yyMMddHH"/>
+
     <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily -->
