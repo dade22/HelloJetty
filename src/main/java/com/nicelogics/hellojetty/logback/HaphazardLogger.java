@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
  */
 public class HaphazardLogger {
 
-    private static final Logger logger = LoggerFactory.getLogger(Index.class);
+    private static final Logger logger = LoggerFactory.getLogger(HaphazardLogger.class);
 
     public void demo() {
 
