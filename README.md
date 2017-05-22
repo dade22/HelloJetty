@@ -12,16 +12,22 @@
 
 ### (Probably) future friends:
 * *Hibernate*, EclipseLink, jOOQ, Sormula, SimpleORM
-* *Flyway*, *Liquibase*
+* Flyway, *Liquibase*
+* *Lucene*
 * Joda-Time
 * Google Guava
-* iText
+* ZXing, QRGen, Barcode4J
+* iText, ICEpdf
 * Javax JCR
 * Mustache, FreeMarker
 * *Vaadin*
+* TrueZIP
 
 ### Very far future friends:
-Deeplearning4j, TensorFlow, ImageJ ..mm.. and what else?
+Deeplearning4j, TensorFlow, ImageJ .. what else?
+
+### A bit of .. links
+http://java-source.net/
 
 Happy coding,
 *Davide*
