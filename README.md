@@ -5,14 +5,13 @@
 
 ### A list of friends:
 
-* `Jetty` is a Java HTTP (Web) server and Java Servlet container 
-* `Jersey` is an open source framework for developing RESTful Web Services
-* `Jackson` is a high-performance JSON processor for Java
+* `Jetty` is a Java HTTP (Web) server and Java Servlet container.
+* `Jersey` is an open source framework for developing RESTful Web Services.
+* `Jackson` is a high-performance JSON processor for Java.
 * `Logback` is a Java-based logging utility. Successor to the popular log4j project.
+* 'OrientDB' is an open source NoSQL database management system written in Java.
 
 ### (Probably) future friends:
-* *Hibernate*, EclipseLink, jOOQ, Sormula, SimpleORM
-* Flyway, *Liquibase*
 * *Lucene*
 * Joda-Time
 * Google Guava
@@ -22,6 +21,9 @@
 * Mustache, FreeMarker
 * *Vaadin*
 * TrueZIP
+
+* *Hibernate*, EclipseLink, jOOQ, Sormula, SimpleORM
+* Flyway, *Liquibase*
 
 ### Very far future friends:
 Deeplearning4j, TensorFlow, ImageJ .. what else?
