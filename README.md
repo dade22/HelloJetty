@@ -9,7 +9,7 @@
 * `Jersey` is an open source framework for developing RESTful Web Services.
 * `Jackson` is a high-performance JSON processor for Java.
 * `Logback` is a Java-based logging utility. Successor to the popular log4j project.
-* 'OrientDB' is an open source NoSQL database management system written in Java.
+* `OrientDB` is an open source NoSQL database management system written in Java.
 
 ### (Probably) future friends:
 * *Lucene*
