@@ -1,6 +1,6 @@
 # HelloJetty
 
-> Welcome to my personal Jetty Playground!
+> Welcome to my personal playground!
 > This is not a useful project for real purpose but will be funny jump around on this great http web server.
 
 ### A list of friends:
@@ -11,7 +11,7 @@
 * `Logback` is a Java-based logging utility. Successor to the popular log4j project.
 * `OrientDB` is an open source NoSQL database management system written in Java.
 
-### (Probably) future friends:
+### (Probably/Unordered) future friends:
 * *Lucene*
 * Joda-Time
 * Google Guava
@@ -22,11 +22,10 @@
 * *Vaadin*
 * TrueZIP
 
+### Very far future friends:
+* Deeplearning4j, TensorFlow, ImageJ .. what else?
 * *Hibernate*, EclipseLink, jOOQ, Sormula, SimpleORM
 * Flyway, *Liquibase*
-
-### Very far future friends:
-Deeplearning4j, TensorFlow, ImageJ .. what else?
 
 ### A bit of .. links
 http://java-source.net/
