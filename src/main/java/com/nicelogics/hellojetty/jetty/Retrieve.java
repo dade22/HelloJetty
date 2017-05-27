@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.nicelogics.hellojetty.resources;
+package com.nicelogics.hellojetty.jetty;
 
 import com.nicelogics.hellojetty.structures.Student;
 import java.util.ArrayList;
@@ -28,8 +28,7 @@ public class Retrieve {
         l.add("three");
         return l;
     }
-    
-    
+
     @GET
     @Path("student")
     @Produces(MediaType.APPLICATION_JSON)

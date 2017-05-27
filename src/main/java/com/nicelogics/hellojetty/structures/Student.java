@@ -58,7 +58,7 @@ public class Student implements Serializable {
 
         first_name = "Fahad";
         last_name = "Mullaji";
-        array = new String[] {"one", "two", "three"};
+        array = new String[]{"one", "two", "three"};
         list = new ArrayList<>();
         list.add("one");
         list.add("two");

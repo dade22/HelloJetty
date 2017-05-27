@@ -23,8 +23,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Jackson2Example {
 
-    private String addTextLine(String text, String line)
-    {
+    private String addTextLine(String text, String line) {
         return text + line + System.lineSeparator();
     }
 
@@ -64,7 +63,7 @@ public class Jackson2Example {
             e.printStackTrace();
             retText = addTextLine(retText, e.getMessage());
         }
-        
+
         return retText;
     }
 

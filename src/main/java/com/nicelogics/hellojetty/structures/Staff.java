@@ -11,10 +11,11 @@ import java.math.BigDecimal;
 import java.util.List;
 
 /**
- * @JsonView, useful feature, it lets you control what fields to display.
- * 6.1 A simple class, do nothing, just define two views (static classes as members).
- * 6.2 For “Normal view”, salary will be hidden, for “Manager view”, display everything.
- * 
+ * @JsonView, useful feature, it lets you control what fields to display. 6.1 A
+ * simple class, do nothing, just define two views (static classes as members).
+ * 6.2 For “Normal view”, salary will be hidden, for “Manager view”, display
+ * everything.
+ *
  * @author Developer
  */
 public class Staff {

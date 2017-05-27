@@ -5,7 +5,7 @@
  */
 package com.nicelogics.hellojetty;
 
-import com.nicelogics.hellojetty.logback.HaphazardLogger;
+import com.nicelogics.hellojetty.orientdb.EmbeddedServer;
 import java.awt.Desktop;
 import java.net.URI;
 import org.eclipse.jetty.server.Server;
@@ -27,21 +27,21 @@ public class Start {
 
     private void go(int port) throws Exception {
 
-        new HaphazardLogger().demo();
+        new EmbeddedServer().go();
 
         boolean InDev = true;
         Server server = null;
         try {
 
-            System.out.println("user.dir: "+System.getProperty("user.dir"));
-            System.out.println("user.home: "+System.getProperty("user.home"));
-            System.out.println("java.home: "+System.getProperty("java.home"));
+            System.out.println("user.dir: " + System.getProperty("user.dir"));
+            System.out.println("user.home: " + System.getProperty("user.home"));
+            System.out.println("java.home: " + System.getProperty("java.home"));
 
-            System.out.println("http://localhost:"+port+"/index.html");
+            System.out.println("http://localhost:" + port + "/index.html");
             System.out.println("\r\n");
 
             ResourceConfig resourceConfig = new ResourceConfig();
-            resourceConfig.packages("com.nicelogics.hellojetty.resources");
+            resourceConfig.packages("com.nicelogics.hellojetty.jetty");
 //            resourceConfig.register(Calculator.class);
 
             ServletContainer servletContainer = new ServletContainer(resourceConfig);
@@ -55,22 +55,16 @@ public class Start {
             server.setStopAtShutdown(true);
             server.setDumpBeforeStop(true);
 
-//        ResourceConfig config = new ResourceConfig();
-//        config.packages("com.nicelogics.hellojetty.resources");
-//        ServletHolder servlet = new ServletHolder(new ServletContainer(config));
-//        Server server = new Server(2222);
-//        ServletContextHandler context = new ServletContextHandler(server, "/*");
-//        context.addServlet(servlet, "/*");
-
             server.start();
 
-            if(InDev && Desktop.isDesktopSupported())
-              Desktop.getDesktop().browse(new URI("http://localhost:"+port+"/index.html"));
+            if (InDev && Desktop.isDesktopSupported()) {
+                Desktop.getDesktop().browse(new URI("http://localhost:" + port + "/index.html"));
+            }
 
             server.join();
 
         } catch (Exception ex) {
-            
+
             ex.printStackTrace();
             throw ex;
 

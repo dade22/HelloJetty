@@ -6,14 +6,16 @@
 package com.nicelogics.hellojetty.jackson;
 
 /**
- * @JsonView, useful feature, it lets you control what fields to display.
- * 6.1 A simple class, do nothing, just define two views (static classes as members).
- * 
+ * @JsonView, useful feature, it lets you control what fields to display. 6.1 A
+ * simple class, do nothing, just define two views (static classes as members).
+ *
  * @author Developer
  */
 public class Views {
 
-    public static class Normal {};
+    public static class Normal {
+    };
 
-    public static class Manager extends Normal {};
+    public static class Manager extends Normal {
+    };
 }

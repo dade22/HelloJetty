@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.nicelogics.hellojetty.resources;
+package com.nicelogics.hellojetty.jetty;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -13,12 +13,11 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 
 /**
-  * @author Developer
+ * @author Developer
  */
-
 @Path("/session")
 public class Session {
-    
+
     @Context
     private HttpServletRequest request;
 
@@ -27,7 +26,7 @@ public class Session {
     public String get() {
 
         HttpSession session = request.getSession();
-        return "time:"+session.getLastAccessedTime()+" n:"+session.getAttribute("n");
+        return "time:" + session.getLastAccessedTime() + " n:" + session.getAttribute("n");
     }
 
     @GET
@@ -38,7 +37,7 @@ public class Session {
         //String existingName = (String)session.getAttribute("n");
         //if (existingName == null || existingName.trim().length() == 0)
         session.setAttribute("n", name);
-        return "time:"+session.getLastAccessedTime()+" ok";
+        return "time:" + session.getLastAccessedTime() + " ok";
     }
 
     @GET
@@ -47,6 +46,6 @@ public class Session {
 
         HttpSession session = request.getSession();
         session.setAttribute("n", null);
-        return "time:"+session.getLastAccessedTime()+" cleared";
+        return "time:" + session.getLastAccessedTime() + " cleared";
     }
 }
