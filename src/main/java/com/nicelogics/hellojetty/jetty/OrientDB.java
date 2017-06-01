@@ -5,7 +5,8 @@
  */
 package com.nicelogics.hellojetty.jetty;
 
-import com.nicelogics.hellojetty.orientdb.EmbeddedServer;
+import com.nicelogics.hellojetty.orientdb.EmbeddedGraphDatabase;
+import com.nicelogics.hellojetty.orientdb.EmbeddedObjectDatabase;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -15,11 +16,20 @@ import javax.ws.rs.core.MediaType;
 public class OrientDB {
 
     @GET
-    @Path("test")
+    @Path("object")
     @Produces(MediaType.TEXT_PLAIN)
-    public String bye() {
+    public String object() {
 
-        new EmbeddedServer().go();
+        new EmbeddedObjectDatabase().go();
+        return "done";
+    }
+
+    @GET
+    @Path("graph")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String graph() {
+
+        new EmbeddedGraphDatabase().go();
         return "done";
     }
 }

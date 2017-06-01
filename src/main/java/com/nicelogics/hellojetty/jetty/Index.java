@@ -40,7 +40,8 @@ public class Index {
         s = addLink(s, "/test", "http://localhost:" + port + "/logback/test");
 
         s = addSection(s, "/orientdb");
-        s = addLink(s, "/test", "http://localhost:" + port + "/orientdb/test");
+        s = addLink(s, "/graph", "http://localhost:" + port + "/orientdb/graph");
+        s = addLink(s, "/object", "http://localhost:" + port + "/orientdb/object");
 
         s += "</html>";
         return s;

@@ -5,7 +5,6 @@
  */
 package com.nicelogics.hellojetty;
 
-import com.nicelogics.hellojetty.orientdb.EmbeddedServer;
 import java.awt.Desktop;
 import java.net.URI;
 import org.eclipse.jetty.server.Server;
@@ -13,12 +12,15 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletContainer;
+import com.nicelogics.hellojetty.utility.Logger;
 
 /**
  *
  * @author davide
  */
 public class Start {
+
+    private final static String CLOGNAME = "Start";
 
     public static void main(String[] args) throws Exception {
 
@@ -27,18 +29,19 @@ public class Start {
 
     private void go(int port) throws Exception {
 
-        new EmbeddedServer().go();
-
         boolean InDev = true;
         Server server = null;
+
         try {
 
-            System.out.println("user.dir: " + System.getProperty("user.dir"));
-            System.out.println("user.home: " + System.getProperty("user.home"));
-            System.out.println("java.home: " + System.getProperty("java.home"));
+            Logger.i(CLOGNAME, "go", "welcome");
 
-            System.out.println("http://localhost:" + port + "/index.html");
-            System.out.println("\r\n");
+            Logger.i(CLOGNAME, "go", "user.dir: " + System.getProperty("user.dir"));
+            Logger.i(CLOGNAME, "go", "user.home: " + System.getProperty("user.home"));
+            Logger.i(CLOGNAME, "go", "java.home: " + System.getProperty("java.home"));
+
+            Logger.i(CLOGNAME, "go", "http://localhost:" + port + "/index.html");
+            Logger.i(CLOGNAME, "go", "\r\n");
 
             ResourceConfig resourceConfig = new ResourceConfig();
             resourceConfig.packages("com.nicelogics.hellojetty.jetty");
@@ -74,5 +77,7 @@ public class Start {
                 server.destroy();
             }
         }
+
+        Logger.i(CLOGNAME, "go", "bye!");
     }
 }

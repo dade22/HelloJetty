@@ -7,12 +7,9 @@ package com.nicelogics.hellojetty.logback;
 
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.joran.JoranConfigurator;
-import ch.qos.logback.core.joran.spi.JoranException;
 import ch.qos.logback.core.util.StatusPrinter;
-import com.nicelogics.hellojetty.jetty.Index;
 import com.nicelogics.hellojetty.utility.ResolveStream;
 import java.io.InputStream;
-import java.util.ResourceBundle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

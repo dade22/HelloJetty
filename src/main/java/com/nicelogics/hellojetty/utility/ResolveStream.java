@@ -5,11 +5,9 @@
  */
 package com.nicelogics.hellojetty.utility;
 
-import com.nicelogics.hellojetty.logback.HaphazardLogger;
 import java.io.InputStream;
 
 /**
- *
  * @author davide
  */
 public class ResolveStream {

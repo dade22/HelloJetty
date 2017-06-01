@@ -5,6 +5,7 @@
  */
 package com.nicelogics.hellojetty.orientdb;
 
+import com.nicelogics.hellojetty.utility.Logger;
 import com.nicelogics.hellojetty.utility.ResolveStream;
 import com.orientechnologies.orient.server.OServer;
 import com.orientechnologies.orient.server.OServerMain;
@@ -13,14 +14,17 @@ import com.tinkerpop.blueprints.Edge;
 import com.tinkerpop.blueprints.Vertex;
 import com.tinkerpop.blueprints.impls.orient.OrientGraph;
 import com.tinkerpop.blueprints.impls.orient.OrientGraphFactory;
+import java.io.File;
 import java.io.InputStream;
 
 /**
  *
  * @author davide
  */
-public class EmbeddedServer {
+public class EmbeddedGraphDatabase {
 
+    private final static String CLOGNAME = "EmbeddedGraphDatabase";
+    
     public void go() {
 
         try {
@@ -35,20 +39,25 @@ public class EmbeddedServer {
 
     private void start() throws Exception {
 
-        System.out.println("DB Server starting..");
-
-        InputStream iStream = ResolveStream.get("db.config");
-        OServer server = OServerMain.create();
-        server = server.startup(iStream);
-        server.activate();
-        System.out.println("DB Server started");
+        String orientdbHome = new File("").getAbsolutePath();
+        Logger.i(CLOGNAME, "start", "Server orientdbHome: " + orientdbHome);
 
         String path = System.getProperty("user.dir");
         if (path == null || path.trim().length() == 0) {
             path = System.getProperty("user.home");
         }
+
+        System.setProperty("ORIENTDB_HOME", path + "/target");
+        Logger.i(CLOGNAME, "start", "Server starting..");
+
+        InputStream iStream = ResolveStream.get("orientdb.xml");
+        OServer server = OServerMain.create();
+        server = server.startup(iStream);
+        server.activate();
+        Logger.i(CLOGNAME, "start", "Server started");
+
         path += "/target/databases/hellojetty";
-        System.out.println("DB Server path: " + path);
+        Logger.i(CLOGNAME, "start", "DB Server path: " + path);
 
         OrientGraphFactory factory = new OrientGraphFactory("plocal:" + path).setupPool(1, 10);
         OrientGraph graph = factory.getTx();
@@ -63,16 +72,16 @@ public class EmbeddedServer {
 
             graph.commit();
 
-            System.out.println("\r\n\r\ncount edges: " + graph.countEdges());
+            Logger.i(CLOGNAME, "start", "\r\n\r\ncount edges: " + graph.countEdges());
 
             Iterable<Edge> edges = graph.getEdges();
             for (Edge edge : edges) {
-                System.out.println("edge: " + edge.getLabel() + " id: " + edge.getId()
+                Logger.i(CLOGNAME, "start", "edge: " + edge.getLabel() + " id: " + edge.getId()
                         + " OUT: " + edge.getVertex(Direction.OUT).getProperty("name")
                         + " IN: " + edge.getVertex(Direction.IN).getProperty("name"));
                 //+ " BOTH: " + edge.getVertex(Direction.BOTH));
             }
-            System.out.println("end edges");
+            Logger.i(CLOGNAME, "start", "end edges");
 
         } catch (Exception e) {
 
@@ -85,8 +94,15 @@ public class EmbeddedServer {
             graph.shutdown();
         }
 
-        System.out.println("DB Server stopping..");
+        // .........
+        
+//        ODatabaseDocument db = ... 
+//        OElement element = db.newInstance("Person");
+//        element.setProperty("name", "John");
+//        element.save();
+
+        Logger.i(CLOGNAME, "start", "Server stopping..");
         server.shutdown();
-        System.out.println("DB Server stopped");
+        Logger.i(CLOGNAME, "start", "Server stopped");
     }
 }
