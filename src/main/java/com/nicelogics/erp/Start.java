@@ -12,7 +12,7 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletContainer;
-import com.nicelogics.hellojetty.utility.Logger;
+import com.nicelogics.erp.utility.Logger;
 
 /**
  *
