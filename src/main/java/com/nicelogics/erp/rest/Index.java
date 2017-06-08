@@ -17,7 +17,7 @@ public class Index {
     @Produces(MediaType.TEXT_HTML)
     public String hello() {
 
-        int port = 2222;
+        int port = 2278;
         String s = "<html>\r\n";
 
         s = addSection(s, "/hello");
